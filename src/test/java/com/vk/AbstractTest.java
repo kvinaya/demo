@@ -32,7 +32,7 @@ public abstract class AbstractTest {
         return objMapper.writeValueAsString(obj);
     }
 
-    protected <T> T mapFromJson(String json, Class<T> cls) throws JsonParseException, JsonMappingException, IOException {
+    protected <T> T mapFromJson(String json, Class<T> cls) throws IOException {
         ObjectMapper objMapper = new ObjectMapper();
         return objMapper.readValue(json, cls);
 
